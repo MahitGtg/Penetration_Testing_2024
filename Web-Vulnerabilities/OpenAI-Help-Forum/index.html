@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HelpAI Forum</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>HelpAI Forum</h1>
+    </header>
+    <div class="container">
+        <a href="{{ url_for('login') }}">Login</a> | <a href="{{ url_for('register') }}">Register</a>
+
+        <h2>Comments</h2>
+        <ul>
+        {% for comment in comments %}
+            <li><strong>{{ comment['username'] }}:</strong> {{ comment['comment']|safe }}</li>
+        {% endfor %}
+        </ul>
+
+        <h2>Post a Comment</h2>
+        <form action="{{ url_for('comment') }}" method="post">
+            <input type="text" name="username" placeholder="Your name" required><br><br>
+            <textarea name="comment" placeholder="Your comment"></textarea><br><br> <!-- Placeholder updated -->
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    <footer>
+        <p>HelpAI © 2024</p>
+    </footer>
+</body>
+</html>

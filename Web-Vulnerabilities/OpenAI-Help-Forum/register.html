@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>HelpAI Forum Register</h1>
+    </header>
+    <div class="container">
+        {% if error %}
+            <p style="color: red;">{{ error }}</p>
+        {% endif %}
+        <form action="{{ url_for('register') }}" method="post">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required><br><br>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required><br><br>
+            <button type="submit">Register</button>
+        </form>
+    </div>
+    <footer>
+        <p>HelpAI © 2024</p>
+    </footer>
+</body>
+</html>

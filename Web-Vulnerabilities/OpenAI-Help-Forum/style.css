@@ -1,0 +1,85 @@
+/* style.css /
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2 {
+    color: #005f99; / HelpAI blue color /
+}
+
+a {
+    color: #005f99; / Links matching HelpAI theme /
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+header {
+    background-color: #003f63; / Darker HelpAI blue /
+    color: #fff;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+/ Modify the footer style /
+footer {
+    background-color: #003366; / Darker color for contrast /
+    color: #ffffff; / White text /
+    text-align: center;
+    padding: 10px 0; / Reduce padding to minimize the height /
+    position: fixed; / Fix the footer at the bottom /
+    width: 100%;
+    bottom: 0; / Align to the bottom /
+    font-size: 12px; / Reduce font size /
+}
+
+
+.container {
+    width: 80%;
+    margin: 20px auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding-bottom: 60px; / Space for the fixed footer */
+}
+
+button, input[type="submit"] {
+    background-color: #005f99;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+button:hover, input[type="submit"]:hover {
+    background-color: #004e7a;
+}
+
+input[type="text"], input[type="password"], textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    background: #e7f1fa;
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 4px;
+} 

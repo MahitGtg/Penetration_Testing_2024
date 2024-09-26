@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>HelpAI Dashboard</h1>
+    </header>
+    <div class="container">
+        <p>Welcome, {{ session['username'] }}!</p>
+        <a href="{{ url_for('logout') }}">Logout</a>
+        <h2>Questions and Answers</h2>
+        <ul>
+        {% for comment in comments %}
+            <li>
+                <strong>{{ comment['username'] }}:</strong> {{ comment['comment']|safe }}
+                <ul>
+                {% for answer in answers %}
+                    {% if answer['comment_id'] == comment['id'] %}
+                        <li><strong>{{ answer['username'] }}:</strong> {{ answer['answer'] }}</li>
+                    {% endif %}
+                {% endfor %}
+                </ul>
+                <form action="{{ url_for('dashboard') }}" method="post">
+                    <input type="hidden" name="comment_id" value="{{ comment['id'] }}">
+                    <textarea name="answer" placeholder="Your answer" required></textarea><br><br>
+                    <button type="submit">Submit</button>
+                </form>
+            </li>
+        {% endfor %}
+        </ul>
+    </div>
+    <footer>
+        <p>HelpAI © 2024</p>
+    </footer>
+</body>
+</html>

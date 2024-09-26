@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Hello, {{ username }}!</h1>
+        <h2>Enter Your Shift Details</h2>
+        <form action="{{ url_for('home') }}" method="post">
+            <label for="start_date">Start Date</label>
+            <input type="date" name="start_date" id="start_date" required>
+            <label for="start_time">Start Time</label>
+            <input type="time" name="start_time" id="start_time" required>
+            <label for="end_date">End Date</label>
+            <input type="date" name="end_date" id="end_date" required>
+            <label for="end_time">End Time</label>
+            <input type="time" name="end_time" id="end_time" required>
+            <button type="submit">Submit</button>
+        </form>
+        <a href="{{ url_for('logout') }}">Logout</a>
+    </div>
+</body>
+</html>
