@@ -1,0 +1,2 @@
+This are some of the vulnerabilities I tried to implement but they had too many issues and had to be dropped for time
+The OpenAI-HelpForum was meant to implement the in attribute XSS vulnerabilities but the flags were to easily found

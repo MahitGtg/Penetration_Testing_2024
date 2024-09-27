@@ -1,0 +1,3 @@
+Even with some input controls in place, there might be ways to bypass them using unconventional methods. 
+Consider how to manipulate elements indirectly.
+                                                                    - HackerTeam

@@ -1,0 +1,3 @@
+"Explore the available functionalities and interactions. 
+Pay close attention to areas where user input is processed and how it could influence database queries."
+                        - HackerTeam

@@ -1,0 +1,3 @@
+Emulating certain behaviors might trigger interesting outcomes. 
+Running specific tools could replicate these scenarios.
+                                                     - HackerTeam
