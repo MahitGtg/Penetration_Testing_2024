@@ -1,0 +1,1 @@
+There will be a empty jpg file called nonexistence.jpg which will help them in understanding to use <img exploits

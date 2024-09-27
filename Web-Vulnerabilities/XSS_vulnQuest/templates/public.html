@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Public Page</title>
+</head>
+<body>
+    <h2>Public Feedback</h2>
+    <form method="POST" action="{{ url_for('public') }}">
+        <textarea name="feedback" rows="4" cols="50"></textarea><br>
+        <input type="submit" value="Submit">
+    </form>
+    {% if feedback %}
+        <h3>Your Feedback:</h3>
+        <p>{{ feedback|safe }}</p>
+    {% endif %}
+    {{ hidden_credentials|safe }}
+</body>
+</html>
