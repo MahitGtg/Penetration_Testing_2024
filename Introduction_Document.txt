@@ -1,0 +1,19 @@
+HELLO PENTESTERS
+THERE ARE THREE WEB VULNERABILITIES IN THIS VIM
+
+1. clocking_system in `Jerome` 
+You only need to run `python3 clock_app.py` all requirements are already provided.
+Just copy and paste the url into firefox.
+
+
+2. CSRF in `Abdul`
+You need to find the correct directory
+In the same directory run `source venv/bin/activate` to get into the python environment
+Then run `python3 csrf.py`
+Just copy and paste the url into firefox.
+
+3. Xx_VulnQuest_xX in `Radin`
+You need to find the correct directory
+In the same directory run `source venv/bin/activate` to get into the python environment
+Then run `python3 vulnQuest.py`
+Just copy and paste the url into firefox.
